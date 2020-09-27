@@ -21,7 +21,7 @@ module.exports = {
 	 */
 
 	FRONT_URL: "http://localhost:3000",
-	//FRONT_URL: "https://vigorous-golick-f5efa9.netlify.app/",
+	///FRONT_URL: "https://vigorous-golick-f5efa9.netlify.app/",
 
 	/**
 	 * TODO: must be replaced for production
