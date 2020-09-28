@@ -7,9 +7,9 @@ module.exports = {
 	/**
 	 * MongoDB URL from system environment variable "MONGO_URL".
 	 */
-	MONGO_URL: process.env.MONGO_URL,
+	//MONGO_URL: process.env.MONGO_URL,
 	//MONGO_URL: "mongodb://127.0.0.1:27017/saudi",
-	// MONGO_URL: "mongodb+srv://shurenyu:cjy3219891@cluster0-q89pr.azure.mongodb.net/test",
+	MONGO_URL: "mongodb+srv://shurenyu:cjy3219891@cluster0-q89pr.azure.mongodb.net/test",
 
 	/**
 	 * Secret key for JWT
@@ -28,6 +28,6 @@ module.exports = {
 	 * SocialInvestme Mailer
 	 */
 	// MAIL_SG_API: process.env.SEND_GRID_API_KEY,
-	MAIL_SENDER: "addison56@ethereal.email",
+	// MAIL_SENDER: "addison56@ethereal.email",
 	// MAIL_SENDER: process.env.MAIL_SENDER_ADDRESS,
 };
