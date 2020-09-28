@@ -346,6 +346,7 @@ router.all("/scraping-product-all", async (req, res) => {
         scraping_photo_link: {$regex: regLink},
     }).then( scrapingList =>  {
         if(scrapingList){
+            console.log("connect MongoDb")
             return res.status(200).json({results: [...scrapingList]});
         }
         else{
