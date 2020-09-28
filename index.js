@@ -28,7 +28,7 @@ mongoose
 	.then(() => console.log("MongoDB successfully connected"))
 	.catch(err => console.log(err));
 
-app.use('/', (req, res) => {
+app.use('/test', (req, res) => {
 	return res.status(200).json({welcome: 'welcome to here'});
 });
 app.use("/api/filters", filters);
