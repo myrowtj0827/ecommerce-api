@@ -11,7 +11,8 @@ const config = require("./config");
 
 app.use(
 	cors({
-		origin: config.FRONT_URL,
+		// origin: config.FRONT_URL,
+		origin: '*',
 	})
 );
 
