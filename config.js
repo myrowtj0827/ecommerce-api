@@ -9,7 +9,6 @@ module.exports = {
 	 */
 	//MONGO_URL: process.env.MONGO_URL,
 	//MONGO_URL: "mongodb://127.0.0.1:27017/saudi",
-	//MONGO_URL: "mongodb+srv://shurenyu:cjy3219891@cluster0-q89pr.azure.mongodb.net/test",
 	MONGO_URL: "mongodb+srv://maxim:jeng0827@cluster0.nl5do.mongodb.net/saudi",
 
 	/**
