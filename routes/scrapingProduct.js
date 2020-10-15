@@ -368,7 +368,7 @@ router.all("/get-popular-product", async (req, res) => {
     Filter.aggregate([
         {$match: data}
     ])
-        .sort({scraping_name: 1})
+        .sort({scraping_photo_link: -1})
         .limit(8)
         .then(scrapingList => {
             if (scrapingList) {
