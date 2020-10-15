@@ -357,18 +357,22 @@ router.all("/scraping-product-all", async (req, res) => {
  * Popular products
  */
 router.all("/get-popular-product", async (req, res) => {
-    Filter.find({})
+    const data = {
+        $nor: [
+            {scraping_price: NaN},
+            {scraping_price: undefined},
+            {scraping_price: 0}
+        ]
+    };
+
+    Filter.aggregate([
+        {$match: data}
+    ])
+        .sort({scraping_name: 1})
+        .limit(8)
         .then(scrapingList => {
             if (scrapingList) {
-                let sArray = [];
-                if (scrapingList.length < 8) {
-                    sArray = scrapingList;
-                } else {
-                    for (let k = 0; k < 8; k++) {
-                        sArray.push(scrapingList[k]);
-                    }
-                }
-                return res.status(200).json({results: sArray});
+                return res.status(200).json({results: scrapingList});
             } else {
                 return res.status(400).json({msg: "The products can not find"});
             }
