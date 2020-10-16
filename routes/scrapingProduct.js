@@ -368,7 +368,7 @@ router.all("/get-popular-product", async (req, res) => {
     Filter.aggregate([
         {$match: data}
     ])
-        .sort({scraping_photo_link: -1})
+        .sort({_id: 1})
         .limit(8)
         .then(scrapingList => {
             if (scrapingList) {
@@ -413,7 +413,7 @@ router.all("/get-page-product", async (req, res) => {
         {$match: data}
     ])
         .collation({locale: 'en', strength: 2})
-        .sort({scraping_price: 1})
+        .sort({_id: 1})
         .skip((page_number - 1) * pagination)
         .limit(pagination)
         .then(scrapingList => {
