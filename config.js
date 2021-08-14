@@ -12,7 +12,7 @@ module.exports = {
 	MONGO_URL: "mongodb+srv://maxim:jeng0827@cluster0.nl5do.mongodb.net/saudi",
 
 	/**
-	 * Secret key for JWT
+	 * Secret key for JWTs
 	 */
 	SECRET_KEY: "SOCIAL_INVESTME",
 
@@ -20,8 +20,8 @@ module.exports = {
 	 * This setting is used only for the content of the mails with link to ... (in forgot-password)
 	 */
 
-	//FRONT_URL: "http://localhost:3000",
-	FRONT_URL: "https://dreamy-hawking-64c022.netlify.app/",
+	FRONT_URL: "http://localhost:3000",
+	//FRONT_URL: "https://dreamy-hawking-64c022.netlify.app/",
 
 	/**
 	 * TODO: must be replaced for production

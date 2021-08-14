@@ -433,7 +433,6 @@ router.all("/get-page-product", async (req, res) => {
 
 
 router.all("/scraping-product-sort", async (req, res) => {
-
     let pStr = req.body.category;
     let pSplit = pStr.split(' ');
 
@@ -446,7 +445,6 @@ router.all("/scraping-product-sort", async (req, res) => {
     reE += '.*$';
     let rew = new RegExp(reE);
     let regLink = new RegExp('.+');
-
 
     const data = {
         $nor: [
